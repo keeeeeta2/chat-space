@@ -1,0 +1,29 @@
+.wrapper
+    .chat-side
+        .side-header
+            .side-header__block
+                %p.side-header__block__user-name test-user
+                %ul.side-header__block__menu
+                    %li.side-header__block__menu__edit-group
+                        %i.fa.fa-edit
+                    %li.side-header__block__menu__edit-account
+                        %i.fa.fa-cog
+        .groups
+            = render "group"
+    .chat-main
+        .main-header
+            .main-header__left-block
+                %ul.main-header__left-block__current-group test-group
+                %ul.main-header__left-block__member-list
+                    %li.main-header__left-block__member-list__member Member:aaa
+            .main-header__edit-btn Edit
+        .messages
+            = render "message"
+        .form
+            %form.new_message
+                .input-block
+                    %input.input-block__text{placeholder: "type a message", type: "text", name: "message[content]", id: "message_content"}
+                    %label.input-block__image{for: "message_image"}
+                        %i.fa.fa-image
+                        %input.input-block__image__file{type: "file", name: "message[image]", id: "message_image"}
+                %input.submit-btn{type: "submit", name: "commit", value: "Send"}
