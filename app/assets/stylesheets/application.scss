@@ -1,8 +1,9 @@
-@import "./reset";
-@import "./_global";
-@import "./_side";
-@import "./_main";
+@import "config/reset";
+@import "modules/global";
+@import "modules/_side";
+@import "modules/_main";
 @import "font-awesome";
-
-
-
+@import "config/_colors";
+@import "modules/flash";
+@import "modules/user";
+@import "modules/group";
