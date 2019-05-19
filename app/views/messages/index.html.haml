@@ -1,15 +1,4 @@
 .wrapper
-    .chat-side
-        .side-header
-            .side-header__block
-                %p.side-header__block__user-name test-user
-                %ul.side-header__block__menu
-                    %li.side-header__block__menu__edit-group
-                        %i.fa.fa-edit
-                    %li.side-header__block__menu__edit-account
-                        %i.fa.fa-cog
-        .groups
-            = render "group"
     .chat-main
         .main-header
             .main-header__left-block
@@ -18,7 +7,7 @@
                     %li.main-header__left-block__member-list__member Member:aaa
             .main-header__edit-btn Edit
         .messages
-            = render "message"
+            = render "layouts/message"
         .form
             %form.new_message
                 .input-block

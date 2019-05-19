@@ -20,17 +20,13 @@
           display: flex;
           &__edit-user {
             margin-left: 0.3rem;
-            a {
-              text-decoration: none;
-              color: $BackWhiteColor;
-            }
+            text-decoration: none;
+            color: $BackWhiteColor;
           }
           &__new-group {
             margin-left: 0.3rem;
-            a {
-              text-decoration: none;
-              color: $BackWhiteColor;
-            }
+            text-decoration: none;
+            color: $BackWhiteColor;
           }
         }
       }
