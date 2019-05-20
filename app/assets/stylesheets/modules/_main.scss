@@ -55,49 +55,49 @@
             margin-left: 10px;
           }
         }
-        &__text {
+        &__lower-info {
           color: $MainTextColor;
           font-size: 14px;
           margin-bottom: 10px;
         }
       }
     }
-    .form {
-      height: 90px;
-      padding: 20px 40px;
-      background-color: #dddddd;
-      .new_message {
-        display: flex;
-        .input-block {
-          position: relative;
-          width: 100%;
-          &__text {
-            height: 50px;
-            width: 100%;
-            padding: 0 40px 0 10px;
-            color: $MainTextColor;
-            border-style: none;
-          }
-          &__image {
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            &__file {
-              display: none;
-            }
-          }
-        }
-        .submit-btn {
-          width: 100px;
+  }
+  .form {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #dddddd;
+    .new_message {
+      display: flex;
+      .input-box {
+        position: relative;
+        width: 100%;
+        &__text {
           height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: $button-color;
-          color: $BackWhiteColor;
-          cursor: pointer;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: $MainTextColor;
+          border-style: none;
         }
+        &__image {
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          &__file {
+            display: none;
+          }
+        }
+      }
+      .submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $button-color;
+        color: $BackWhiteColor;
+        cursor: pointer;
       }
     }
   }

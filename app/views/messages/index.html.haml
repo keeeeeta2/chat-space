@@ -1,4 +1,6 @@
 .wrapper
+    =render 'layouts/side'
+    =render 'layouts/group'
     .chat-main
         .main-header
             .main-header__left-block
@@ -7,12 +9,14 @@
                     %li.main-header__left-block__member-list__member Member:aaa
             .main-header__edit-btn Edit
         .messages
-            = render "layouts/message"
+            = render partial: 'layouts/message', collection: @messages
+
         .form
-            %form.new_message
-                .input-block
-                    %input.input-block__text{placeholder: "type a message", type: "text", name: "message[content]", id: "message_content"}
-                    %label.input-block__image{for: "message_image"}
-                        %i.fa.fa-image
-                        %input.input-block__image__file{type: "file", name: "message[image]", id: "message_image"}
-                %input.submit-btn{type: "submit", name: "commit", value: "Send"}
+            = form_for [@group, @message], html: {class: 'new_message'} do |f|
+                .input-box
+                    = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+                    = f.label :image, class: 'input-box__image' do
+                        = fa_icon("image")
+                        = f.file_field :image, class: 'input-box__image__file'
+                = f.submit 'Send', class: 'submit-btn'
+
